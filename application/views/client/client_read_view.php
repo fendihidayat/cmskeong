@@ -3,9 +3,6 @@
     $this->load->view('client_layout/2_head_logo');
     $this->load->view('client_layout/3_menu');
     echo "<main>";
-    $this->load->view('client_layout/4_trending');
-    $this->load->view('client_layout/5_weeklynews');
-    $this->load->view('client_layout/6_whatnews');
 
 ?>  
     <!-- About US Start -->
@@ -36,11 +33,11 @@
                                 foreach($berita as $read){
                                     echo "
                                     <div class='section-tittle mb-30 pt-30'>
-                                        <h3$read->judul</h3>
+                                        <h2>$read->judul</h2>
                                     </div>
                                     <div class='about-img'>
-                                        <img src='".base_url()."gambar/$read->gambar' alt='$read->deskripsi_gambar'>
-                                        <small>$read->deskripsi_gambar<small>
+                                        <img src='".base_url()."gambar/berita/$read->gambar' alt='$read->deskripsi_gambar'>
+                                        <small>$read->deskripsi_gambar</small>
                                     </div>                                    
                                     <div class='about-prea'>
                                         $read->isi_berita

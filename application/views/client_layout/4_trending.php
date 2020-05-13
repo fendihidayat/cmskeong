@@ -11,7 +11,7 @@
                             <div class="trending-animated">
                                 <ul id="js-news" class="js-hidden">
                                 <?php  foreach($trending as $headlinetrend){
-                                    echo "<li class='news-item'><a href='news/read/$headlinetrend->link'>$headlinetrend->judul</a></li>";
+                                    echo "<li class='news-item'><a href='".base_url()."news/read/$headlinetrend->link'>$headlinetrend->judul</a></li>";
                                 }?>
                                 </ul>
                             </div>
@@ -31,7 +31,7 @@
                                         <img src='".base_url()."gambar/berita/$headlinetrend->gambar' alt='$headlinetrend->deskripsi_gambar'>
                                         <div class='trend-top-cap'>
                                             <span>$headlinetrend->nama_kategori</span>
-                                            <h2><a href='news/read/$headlinetrend->link'>$headlinetrend->judul</a></h2>
+                                            <h2><a href='".base_url()."news/read/$headlinetrend->link'>$headlinetrend->judul</a></h2>
                                         </div>
                                     </div>
                                 </div>";

@@ -31,7 +31,7 @@
                                     </div>
                                     <div class='weekly-caption'>
                                         <span class='color".$i."'>$headlinetrend->nama_kategori</span>
-                                        <h4><a href='news/read/$headlinetrend->link'>$headlinetrend->judul</a></h4>
+                                        <h4><a href='".base_url()."news/read/$headlinetrend->link'>$headlinetrend->judul</a></h4>
                                     </div>
                                 </div> 
                                 ";
