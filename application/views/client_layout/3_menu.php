@@ -5,7 +5,7 @@
                             <div class="col-xl-10 col-lg-10 col-md-12 header-flex">
                                 <!-- sticky -->
                                     <div class="sticky-logo">
-                                        <a href="index.html"><img src="<?php echo base_url(); ?>assets/front_end/img/logo/logo.png" alt=""></a>
+                                        <a href="<?php echo base_url(); ?>news"><img src="<?php echo base_url(); ?>assets/front_end/img/logo/logo.png" alt=""></a>
                                     </div>
                                 <!-- Main-menu -->
                                 <div class="main-menu d-none d-md-block">

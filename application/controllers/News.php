@@ -21,6 +21,11 @@ class News extends CI_Controller{
         $this->load->view('client/client_index_view',$data);
 	}
 	function read($link){
-		
+		$data['trending'] = $this->model->tampil('berita')->result(); 
+        $where['link'] = $link;
+        $data['berita'] = $this->model->cekdata('berita',$where)->result();        
+        $data['kategori'] = $this->model->tampil('kategori')->result();  
+        $data['menu'] = "berita";
+        $this->load->view('client/client_read_view',$data);  		
 	}
 }
