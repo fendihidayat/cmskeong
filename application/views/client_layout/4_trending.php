@@ -22,7 +22,7 @@
                 <div class="row">
                     <?php
                     $i=0;$j=1;
-                    foreach($trending as $headlinetrend){
+                    foreach($berita as $headlinetrend){
                         if($i<1){
                             echo "<div class='col-lg-8'>";
                                 echo "

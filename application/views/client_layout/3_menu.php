@@ -13,7 +13,7 @@
                                         <ul id="navigation">    
                                             <li><a href="<?php echo base_url(); ?>">Home</a></li>
                                             <?php foreach($kategori as $listmenu){
-                                                echo "<li><a href='news/kategori/$listmenu->inisial_kategori'>$listmenu->nama_kategori</a></li>";
+                                                echo "<li><a href='".base_url()."news/kategori/$listmenu->inisial_kategori'>$listmenu->nama_kategori</a></li>";
                                             }?>
                                             <!--<li><a href="categori.html">Category</a></li>
                                             <li><a href="about.html">About</a></li>
