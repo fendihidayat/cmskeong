@@ -15,7 +15,7 @@ class News extends CI_Controller{
 	}
 	function home(){		
 		$data['trending'] = $this->model->tampil('berita')->result(); 
-        $data['berita'] = $this->model->cekdata('berita',$where)->result(); 
+        $data['berita'] = $this->model->tampil('berita')->result();  
 		$data['kategori'] = $this->model->tampil('kategori')->result(); 
 		$data['identitas_website'] = $this->model->tampil('identitas_website')->result();     
         $data['menu'] = "home";
