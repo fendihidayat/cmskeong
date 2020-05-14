@@ -43,6 +43,7 @@
                                         $read->isi_berita
                                     </div>
                                     ";
+                                    $link = $read->link;
                                 }
                             ?>                                
                                 <div class="social-share pt-30">
@@ -50,7 +51,7 @@
                                         <h3 class="mr-20">Share:</h3>
                                         <ul>
                                             <li><a href="#"><img src="<?php echo base_url();?>assets/front_end/img/news/icon-ins.png" alt=""></a></li>
-                                            <li><a href="#"><img src="<?php echo base_url();?>assets/front_end/img/news/icon-fb.png" alt=""></a></li>
+                                            <li><a href="http://www.facebook.com/sharer.php?u=<?php echo base_url();?>/news/read/<?php echo $link;?>"><img src="<?php echo base_url();?>assets/front_end/img/news/icon-fb.png" alt=""></a></li>
                                             <li><a href="#"><img src="<?php echo base_url();?>assets/front_end/img/news/icon-tw.png" alt=""></a></li>
                                             <li><a href="#"><img src="<?php echo base_url();?>assets/front_end/img/news/icon-yo.png" alt=""></a></li>
                                         </ul>
