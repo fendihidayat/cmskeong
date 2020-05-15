@@ -35,6 +35,7 @@
                     <table id="example1" class="table table-bordered table-striped">
                         <thead>
                         <tr>
+                        <th>ID Berita</th>
                         <th>Judul</th>
                         <th>Penulis</th>
                         <th>Kategori</th>
@@ -47,6 +48,7 @@
                         <tbody>
                 <?php foreach($berita as $data_berita){ ?>
                         <tr>
+                        <td><?php echo $data_berita->id_berita; ?></td>
                         <td><?php echo $data_berita->judul; ?></td>
                         <td><?php echo $data_berita->nama_user; ?></td>
                         <td><?php echo $data_berita->nama_kategori; ?></td>

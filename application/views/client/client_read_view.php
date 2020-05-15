@@ -37,7 +37,10 @@
                                     </div>
                                     <div class='about-img'>
                                         <img src='".base_url()."gambar/berita/$read->gambar' alt='$read->deskripsi_gambar'>
-                                        <small>$read->deskripsi_gambar</small>
+                                        <ul class='blog-info-link mt-3 mb-4'>
+                                           <li>$read->deskripsi_gambar</li>
+                                           <li><a href='#'><i class='fa fa-comments'></i> 03 Comments</a></li>
+                                        </ul>
                                     </div>                                    
                                     <div class='about-prea'>
                                         $read->isi_berita

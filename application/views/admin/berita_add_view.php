@@ -88,13 +88,13 @@
                             </div>
                             <div class="form-group">                            
                             <label>Deskripsi Gambar</label>
-                                <textarea name="deskripsi_gambar" class="note" required></textarea>
+                                <textarea name="deskripsi_gambar" class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
                             
                             </div>
                             <!-- /.card-header -->
                             <div class="mb-3">                            
                             <label>Tag/Label</label>
-                                <textarea name="tag_label" class="note" required></textarea>
+                                <textarea name="tag_label"  class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
                             <small>*Pisahkan dengan tanda koma</small>
                             </div>
 

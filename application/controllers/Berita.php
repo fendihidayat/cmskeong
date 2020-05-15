@@ -15,9 +15,9 @@ class Berita extends CI_Controller{
         $this->daftarberita();
     }
     function daftarberita(){
-        $data['berita'] = $this->model->tampil('berita')->result();  
-         $data['menu'] = "berita";
-         $this->load->view('admin/berita_list_view',$data);
+        $data['berita'] = $this->model->tampil_orderby('berita','id_berita','DESC')->result();  
+        $data['menu'] = "berita";
+        $this->load->view('admin/berita_list_view',$data);
     }
     function tambahberita(){
         $data['kategori'] = $this->model->tampil('kategori')->result();  
@@ -29,6 +29,7 @@ class Berita extends CI_Controller{
         $tanggal = date('Y-m-d');   
         $jam = date('H:i:s a');   
         $link = str_replace(" ", "-", strtolower($_POST['judul']));
+        $link = $this->seo_friendly_url($link);
         $data = array(
             'nama_kategori' => $_POST['kategori'],
             'username' => 'fendi',
@@ -101,6 +102,10 @@ class Berita extends CI_Controller{
         $jam = date('H:i:s a');   
         $link = str_replace(" ", "-", strtolower($_POST['judul']));
         $link_asli = str_replace(" ", "-", strtolower($_POST['judul_asli']));
+        
+        $link = $this->seo_friendly_url($link);
+        $link_asli = $this->seo_friendly_url($link_asli);
+        
         $data = array(
             'nama_kategori' => $_POST['kategori'],
             'username' => 'fendi',
@@ -227,5 +232,12 @@ class Berita extends CI_Controller{
         {
             echo 'File Delete Successfully';
         }
+    }
+    function seo_friendly_url($string){
+        $string = str_replace(array('[\', \']'), '', $string);
+        $string = preg_replace('/\[.*\]/U', '', $string);
+        $string = preg_replace('/&(amp;)?#?[a-z0-9]+;/i', '-', $string);
+        $string = preg_replace(array('/[^a-z0-9]/i', '/[-]+/') , '-', $string);
+        return strtolower(trim($string, '-'));
     }
 }
