@@ -172,7 +172,7 @@ class Berita extends CI_Controller{
     private function _uploadImage($link)
     {        
         $config['upload_path']          = './gambar/berita';
-        $config['allowed_types']        = 'gif|jpg|png';
+        $config['allowed_types']        = 'gif|jpg|jpeg|png';
         $config['file_name']            = $link;
         $config['overwrite']			= true;
         $config['max_size']             = 2000;

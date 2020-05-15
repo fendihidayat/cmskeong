@@ -6,6 +6,14 @@ class Cmskeong_model extends CI_model{
     function tampil($tabel){
         return $this->db->get($tabel);
     }
+    function tampil_limit($tabel, $limit){
+        return $this->db->get($tabel, $limit);
+    }
+    function tampil_limit_orderby($tabel, $limit, $urutkan, $type){
+        $this->db->limit($limit);
+        $this->db->order_by($urutkan, $type);
+        return $this->db->get($tabel);
+    }
     function update($data,$tabel,$field,$record){
         $this->db->where($field, $record);
         $this->db->update($tabel,$data);

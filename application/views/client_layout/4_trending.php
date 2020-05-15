@@ -30,7 +30,7 @@
                                     <div class='trend-top-img'>
                                         <img src='".base_url()."gambar/berita/$headlinetrend->gambar' alt='$headlinetrend->deskripsi_gambar'>
                                         <div class='trend-top-cap'>
-                                            <span>$headlinetrend->nama_kategori</span>
+                                        <a href='".base_url()."news/kategori/".strtolower($headlinetrend->nama_kategori)."'><span>$headlinetrend->nama_kategori</span></a>
                                             <h2><a href='".base_url()."news/read/$headlinetrend->link'>$headlinetrend->judul</a></h2>
                                         </div>
                                     </div>
@@ -47,10 +47,10 @@
                                     <div class='col-lg-4'>
                                     <div class='single-bottom mb-35'>
                                         <div class='trend-bottom-img mb-30'>
-                                            <img src='".base_url()."gambar/berita/$headlinetrend->gambar' alt='$headlinetrend->deskripsi_gambar'>
+                                            <img src='".base_url()."gambar/berita/$headlinetrend->gambar' widht='234' height='132' alt='$headlinetrend->deskripsi_gambar'>
                                         </div>
                                         <div class='trend-bottom-cap'>
-                                            <span class='color".$i."'>$headlinetrend->nama_kategori</span>
+                                        <a href='".base_url()."news/kategori/".strtolower($headlinetrend->nama_kategori)."'><span class='color".$i."'>$headlinetrend->nama_kategori</span></a>
                                             <h4><a href='news/read/$headlinetrend->link'>$headlinetrend->judul</a></h4>
                                         </div>
                                     </div>
@@ -76,12 +76,15 @@
                                                 <img src='".base_url()."gambar/berita/$headlinetrend->gambar' height='100px' width='120px' alt='$headlinetrend->deskripsi_gambar'>
                                             </div>
                                             <div class='trand-right-cap'>
-                                                <span class='color".$j."'>$headlinetrend->nama_kategori</span>
+                                            <a href='".base_url()."news/kategori/".strtolower($headlinetrend->nama_kategori)."'><span class='color".$j."'>$headlinetrend->nama_kategori</span></a>
                                                 <h4><a href='news/read/$headlinetrend->link'>$headlinetrend->judul</a></h4>
                                             </div>
                                         </div>
                             ";
-                            if($i==5){
+                            if($j==4){                                
+                                $j=1;
+                            }
+                            if($i==8){
                                 echo "</div>";
                             }
                             $j++;
