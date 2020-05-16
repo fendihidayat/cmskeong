@@ -46,9 +46,7 @@
                             <!-- /.card-header -->
                             <div class="mb-3">                            
                             <label>Isi Berita</label>                                
-                                <textarea name="isi_berita" id="summernote" required>
-                                    <?php echo $isi_berita; ?>
-                                </textarea>
+                                <textarea name="isi_berita" id="summernote" required><?php echo $isi_berita; ?></textarea>
                             </div>
                         </div>
                         <!-- /.card-body -->
@@ -103,19 +101,13 @@
                             </div>
                             <div class="form-group">                         
                             <label>Deskripsi Gambar</label>
-                                <textarea name="deskripsi_gambar" class="note" 
-                                        style="width: 100%; height: 100%; font-size: 10px; line-height: 12px; border: 1px solid #dddddd; padding: 5px;" required>
-                                    <?php echo $deskripsi_gambar; ?>
-                                </textarea>
+                                <textarea name="deskripsi_gambar" class="form-control" id="exampleFormControlTextarea1" rows="3" required><?php echo trim($deskripsi_gambar); ?></textarea>
                             
                             </div>
                             <!-- /.card-header -->
                             <div class="mb-3">                            
                             <label>Tag/Label</label>
-                                <textarea name="tag_label" class="note" 
-                                        style="width: 100%; height: 100%; font-size: 10px; line-height: 12px; border: 1px solid #dddddd; padding: 5px;" required>
-                                    <?php echo $tag_label; ?>
-                                </textarea>
+                                <textarea name="tag_label" class="form-control" id="exampleFormControlTextarea1" rows="3" required><?php echo trim($tag_label); ?></textarea>
                             <small>*Pisahkan dengan tanda koma</small>
                             </div>
 

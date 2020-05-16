@@ -38,11 +38,11 @@ class Berita extends CI_Controller{
             'isi_berita' => $_POST['isi_berita'],
             'headline' => $_POST['headline'],
             'publish' => $_POST['publish'],
-            'deskripsi_gambar' => $_POST['deskripsi_gambar'],
+            'deskripsi_gambar' => trim($_POST['deskripsi_gambar']),
             'hari' => $hari,
             'tanggal' => $tanggal,
             'jam' => $jam,
-            'tag_label' => $_POST['tag_label'],
+            'tag_label' => trim($_POST['tag_label']),
             //'gambar' => $this->_uploadImage($link), ---Proses upload gambar
             'link' => $link
         );
@@ -114,11 +114,11 @@ class Berita extends CI_Controller{
             'isi_berita' => $_POST['isi_berita'],
             'headline' => $_POST['headline'],
             'publish' => $_POST['publish'],
-            'deskripsi_gambar' => $_POST['deskripsi_gambar'],
+            'deskripsi_gambar' => trim($_POST['deskripsi_gambar']),
             'hari' => $hari,
             'tanggal' => $tanggal,
             'jam' => $jam,
-            'tag_label' => $_POST['tag_label'],
+            'tag_label' => trim($_POST['tag_label']),
             //'gambar' => $this->_uploadImage(), //---Proses upload gambar
             'link' => $link
         );
