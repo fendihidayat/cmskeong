@@ -29,19 +29,19 @@ class Android extends CI_Controller{
         $cek_user =  $this->model->cek_login("users",['username' => $username])->num_rows();
         
         if($cek > 0){
-            $result['error'] = "No";
+            $result['error'] = false;
             $result['data'] = $this->model->getdata('users','username',$username);
         }else{
             if($cek_user > 0){
-                $result['error'] = "Yes";
+                $result['error'] = true;
                 $result['data'] = "Password untuk $username salah, silahkan ulangi lagi !";
             }else{
-                $result['error'] = "Yes";
+                $result['error'] = true;
                 $result['data'] = "Username atau password salah, silahkan ulangi lagi ";
             }  
             //echo "login";
         }
 
-        echo "[".json_encode($result)."]";
+        echo json_encode($result);
     }
 }
