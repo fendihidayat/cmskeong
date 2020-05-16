@@ -32,8 +32,8 @@ class Berita extends CI_Controller{
         $link = $this->seo_friendly_url($link);
         $data = array(
             'nama_kategori' => $_POST['kategori'],
-            'username' => 'fendi',
-            'nama_user' => 'Fendi Hidayat',
+            'username' => $username,
+            'nama_user' => $nama,
             'judul' => $_POST['judul'],
             'isi_berita' => $_POST['isi_berita'],
             'headline' => $_POST['headline'],
@@ -105,11 +105,13 @@ class Berita extends CI_Controller{
         
         $link = $this->seo_friendly_url($link);
         $link_asli = $this->seo_friendly_url($link_asli);
+        $nama = $this->session->userdata('nama');
+        $username = $this->session->userdata('username');
         
         $data = array(
             'nama_kategori' => $_POST['kategori'],
-            'username' => 'fendi',
-            'nama_user' => 'Fendi Hidayat',
+            'username' => $username,
+            'nama_user' => $nama,
             'judul' => $_POST['judul'],
             'isi_berita' => $_POST['isi_berita'],
             'headline' => $_POST['headline'],
