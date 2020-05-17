@@ -46,6 +46,10 @@
                                 <input type="text" name="nama_website" <?php if(count($identitas_website)>=1){ echo"value='$datawebsite->nama_website'";}?> class="form-control" id="exampleInputEmail1" placeholder="Nama Website" required>
                             </div>
                             <div class="form-group">
+                                <label>Title Website</label>
+                                <input type="text" name="title_website" <?php if(count($identitas_website)>=1){ echo"value='$datawebsite->title_website'";}?> class="form-control" id="exampleInputEmail1" placeholder="Nama Website" required>
+                            </div>
+                            <div class="form-group">
                                 <label>Meta Deskripsi</label>
                                 <input type="text" name="meta_deskripsi" <?php if(count($identitas_website)>=1){ echo"value='$datawebsite->meta_deskripsi'";}?> class="form-control" id="exampleInputEmail1" placeholder="Meta Deskripsi" required>
                             </div>
@@ -88,7 +92,8 @@
                         <table class="table table-striped">
                             <!-- Menampilkan list data user dari database-->
                                 <tr><td>ID</td><td><?php echo $datawebsite->id_website; ?></td></tr>                                    
-                                <tr><td>Nama Website</td>    <td><?php echo $datawebsite->nama_website; ?></td>  </tr>                        
+                                <tr><td>Nama Website</td>    <td><?php echo $datawebsite->nama_website; ?></td>  </tr>                                  
+                                <tr><td>Title Website</td>    <td><?php echo $datawebsite->title_website; ?></td>  </tr>                        
                                 <tr><td>Meta Deskripsi</td>    <td><?php echo $datawebsite->meta_deskripsi; ?></td> </tr>                         
                                 <tr><td>Meta Keyword</td>    <td><?php echo $datawebsite->meta_keyword; ?></td>     </tr>                         
                                 <tr><td>Favicon</td>    <td><img src="<?php echo base_url(); ?>gambar/<?php echo $datawebsite->favicon; ?>"></td></tr>                                  

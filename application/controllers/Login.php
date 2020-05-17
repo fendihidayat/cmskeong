@@ -45,6 +45,7 @@ class Login extends CI_Controller{
                 'level' => $user->level,
                 'password' => $user->password,
                 'nama_website' => $seo->nama_website,
+                'title_website' => $seo->title_website,
                 'meta_deskripsi' => $seo->meta_deskripsi,
                 'meta_keyword' => $seo->meta_keyword,
                 'favicon' => $seo->favicon

@@ -1,6 +1,6 @@
 <?php 
  
-class Android extends CI_Controller{
+class Api extends CI_Controller{
  
 	function __construct(){
         parent::__construct();        
@@ -11,13 +11,13 @@ class Android extends CI_Controller{
  
 	function index(){
         //redirect('news');
-        $this->login_api();
+        $this->login();
     }
     function berita(){        
 		$result = $this->model->tampil('berita')->result(); 
         echo json_encode($result);
     }
-    function login_api()
+    function login()
     {
         $username = $this->input->post('username');
         $password = $this->input->post('password');

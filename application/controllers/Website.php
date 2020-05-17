@@ -34,6 +34,7 @@ class Website extends CI_Controller{
     function simpan_identitas(){
         $data = array(
             'nama_website' => $_POST['nama_website'],
+            'title_website' => $_POST['title_website'],
             'meta_deskripsi' => $_POST['meta_deskripsi'],
             'meta_keyword' => $_POST['meta_keyword'],
             'favicon' => $this->_uploadImage(),
@@ -47,6 +48,7 @@ class Website extends CI_Controller{
         $id_website = $_POST['id_website'];
         $data = array(
             'nama_website' => $_POST['nama_website'],
+            'title_website' => $_POST['title_website'],
             'meta_deskripsi' => $_POST['meta_deskripsi'],
             'meta_keyword' => $_POST['meta_keyword'],
             'footer' => $_POST['footer']

@@ -30,6 +30,8 @@ class Berita extends CI_Controller{
         $jam = date('H:i:s a');   
         $link = str_replace(" ", "-", strtolower($_POST['judul']));
         $link = $this->seo_friendly_url($link);
+        $nama = $this->session->userdata('nama');
+        $username = $this->session->userdata('username');
         $data = array(
             'nama_kategori' => $_POST['kategori'],
             'username' => $username,

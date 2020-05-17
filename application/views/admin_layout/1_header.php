@@ -6,7 +6,7 @@
   <?php
   if($this->session->userdata('status') == "login"){ 
   echo"
-                <title>".$this->session->userdata('nama_website')."</title>
+                <title>".$this->session->userdata('title_website')."</title>
                 <meta name='description' content='".$this->session->userdata('meta_deskripsi')."'>
                 <meta name='keyword' content='".$this->session->userdata('meta_keyword')."'>
                 <link rel='shortcut icon' type='image/x-icon' href='".base_url()."gambar/".$this->session->userdata('favicon')."'>

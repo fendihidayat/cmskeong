@@ -112,6 +112,18 @@
             </ul>
           </li>
 
+            
+          <li class="nav-item has-treeview">
+            <a href="<?php echo base_url('login/logout'); ?>" 
+            <?php if($menu == "logout"){ echo "class='nav-link active'"; }else{ echo "class='nav-link'"; } ?>>
+              <i class="nav-icon fas fa-sign-out-alt"></i>
+              <p>
+                Keluar
+               <!-- <i class="fas fa-angle-left right"></i> -->
+              </p>
+            </a>
+          </li>
+
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

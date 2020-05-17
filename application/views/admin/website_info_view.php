@@ -64,7 +64,8 @@
                                 <?php 
                                 foreach($identitas_website as $datawebsite){ ?>
                                 <tr><td>ID</td><td><?php echo $datawebsite->id_website; ?></td></tr>                                    
-                                <tr><td>Nama Website</td>    <td><?php echo $datawebsite->nama_website; ?></td>  </tr>                        
+                                <tr><td>Nama Website</td>    <td><?php echo $datawebsite->nama_website; ?></td>  </tr>                              
+                                <tr><td>Title Website</td>    <td><?php echo $datawebsite->title_website; ?></td>  </tr>                          
                                 <tr><td>Meta Deskripsi</td>    <td><?php echo $datawebsite->meta_deskripsi; ?></td> </tr>                         
                                 <tr><td>Meta Keyword</td>    <td><?php echo $datawebsite->meta_keyword; ?></td>     </tr>                         
                                 <tr><td>Favicon</td>    <td><img src="<?php echo base_url(); ?>gambar/<?php echo $datawebsite->favicon; ?>"></td></tr>                                  
