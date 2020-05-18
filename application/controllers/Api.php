@@ -19,7 +19,6 @@ class Api extends CI_Controller{
     }
     function login()
     {
-        echo "Sukses";
         $username = $this->input->post('username');
         $password = $this->input->post('password');
         $where = array(
