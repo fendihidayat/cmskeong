@@ -29,14 +29,14 @@ class Api extends CI_Controller{
         $cek_user =  $this->model->cek_login("users",['username' => $username])->num_rows();
         
         if($cek > 0){
-            $result['error'] = false;
+            $result['status'] = "sukses";
             $result['data'] = $this->model->getdata('users','username',$username);
         }else{
             if($cek_user > 0){
-                $result['error'] = true;
+                $result['status'] = "gagal";
                 $result['data'] = "Password untuk $username salah, silahkan ulangi lagi !";
             }else{
-                $result['error'] = true;
+                $result['status'] = "gagal";
                 $result['data'] = "Username atau password salah, silahkan ulangi lagi ";
             }  
             //echo "login";
