@@ -30,7 +30,7 @@ class Api extends CI_Controller{
         
         if($cek > 0){
             $result['status'] = "sukses";
-            $result['data'] = $this->model->getdata('users','username',$username);
+            $result = $this->model->getdata('users','username',$username);
         }else{
             if($cek_user > 0){
                 $result['status'] = "gagal";
