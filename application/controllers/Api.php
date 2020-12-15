@@ -13,10 +13,6 @@ class Api extends CI_Controller{
         //redirect('news');
         $this->login();
     }
-    function berita(){        
-		$result = $this->model->tampil('berita')->result(); 
-        echo json_encode($result);
-    }
     function login()
     {
         $username = $this->input->post('username');
@@ -46,4 +42,30 @@ class Api extends CI_Controller{
 
         echo json_encode($result);
     }
+    function promo(){        
+        $result['data'] = $this->model->tampil_limit_where_orderby('berita','nama_kategori','Iklan',5,'id_berita','DESC')->result();  
+        echo json_encode($result);
+    }
+    function detail($id_berita){
+        //if($id_berita==NULL){redirect('berita');}
+        $where['id_berita'] = $id_berita;
+        $result['data'] = $this->model->cekdata('berita',$where)->result(); 
+        echo json_encode($result);
+    }
+    function berita(){        
+        $result['data'] = $this->model->tampil_limit_where_orderby('berita','nama_kategori','Berita',5,'id_berita','DESC')->result();  
+        echo json_encode($result);
+    }   
+    function beritaAll(){        
+        $result['data'] = $this->model->tampil_where_orderby('berita','nama_kategori','Berita','id_berita','DESC')->result();  
+        echo json_encode($result);
+    }      
+    function all($kategori){        
+        $result['data'] = $this->model->tampil_where_orderby('berita','nama_kategori',$kategori,'id_berita','DESC')->result();  
+        echo json_encode($result);
+    }  
+    function loker(){        
+        $result['data'] = $this->model->tampil_limit_where_orderby('berita','nama_kategori','Loker',5,'id_berita','DESC')->result();  
+        echo json_encode($result);
+    }       
 }

@@ -1,7 +1,7 @@
 <?php
     $this->load->view('client_layout/1_header');
-    $this->load->view('client_layout/2_head_logo');
-    $this->load->view('client_layout/3_menu');
+    $this->load->view('client_layout/2_head_menu');
+    $this->load->view('client_layout/3_slider');
     echo "<main>";
     $this->load->view('client_layout/4_trending');
     $this->load->view('client_layout/5_weeklynews');

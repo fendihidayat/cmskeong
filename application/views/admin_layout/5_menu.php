@@ -13,6 +13,18 @@
               </p>
             </a>
           </li>
+            
+          <li class="nav-item has-treeview">
+            <a href="<?php echo base_url('profile'); ?>" 
+            <?php if($menu == "profile"){ echo "class='nav-link active'"; }else{ echo "class='nav-link'"; } ?>>
+              <i class="nav-icon fas fa-user"></i>
+              <p>
+                Profile User
+               <!-- <i class="fas fa-angle-left right"></i> -->
+              </p>
+            </a>
+          </li>
+
                     
           <li <?php if($menu == "berita" || $menu == "tambahberita" || $menu == "kategori")
           { echo "class='nav-item has-treeview menu-open'"; }else{ echo "class='nav-item has-treeview'"; } ?>>
@@ -78,8 +90,7 @@
               </li>
             </ul>
             -->
-          </li>
-
+          </li>      
                    
           <li <?php if($menu == "idwebsite" || $menu == "cpwebsite" || $menu == "website")
           { echo "class='nav-item has-treeview menu-open'"; }else{ echo "class='nav-item has-treeview'"; } ?>>

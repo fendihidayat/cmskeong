@@ -59,7 +59,7 @@
                             </div>
                             <div class="form-group">
                             <?php if(count($identitas_website)>=1){?>
-                                <label>Gambar Favicon</label> <img src="<?php echo base_url(); ?>gambar/<?php echo $datawebsite->favicon; ?>"><br>
+                                <label>Gambar Favicon</label> <img src="<?php echo base_url(); ?>gambar/<?php echo $datawebsite->favicon; ?>" width="100" height="100"><br>
                             <?php echo "<label>Ubah Gambar Favicon</label>";}else{ echo "<label>Gambar Favicon</label>"; } ?>
                                 <div class="input-group">
                                 <div class="custom-file">
@@ -96,7 +96,7 @@
                                 <tr><td>Title Website</td>    <td><?php echo $datawebsite->title_website; ?></td>  </tr>                        
                                 <tr><td>Meta Deskripsi</td>    <td><?php echo $datawebsite->meta_deskripsi; ?></td> </tr>                         
                                 <tr><td>Meta Keyword</td>    <td><?php echo $datawebsite->meta_keyword; ?></td>     </tr>                         
-                                <tr><td>Favicon</td>    <td><img src="<?php echo base_url(); ?>gambar/<?php echo $datawebsite->favicon; ?>"></td></tr>                                  
+                                <tr><td>Favicon</td>    <td><img src="<?php echo base_url(); ?>gambar/<?php echo $datawebsite->favicon; ?>" width="100" height="100"></td></tr>                                  
                                 <tr><td>Footer</td>    <td><?php echo $datawebsite->footer; ?></td> </tr>                        
                                 
                         </table>

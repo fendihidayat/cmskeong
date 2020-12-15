@@ -18,6 +18,17 @@ class Cmskeong_model extends CI_model{
         $this->db->order_by($urutkan, $type);
         return $this->db->get($tabel);
     }
+    function tampil_where_orderby($tabel, $field, $record, $urutkan, $type){
+        $this->db->where($field, $record);
+        $this->db->order_by($urutkan, $type);
+        return $this->db->get($tabel);
+    }
+    function tampil_limit_where_orderby($tabel, $field, $record, $limit, $urutkan, $type){
+        $this->db->where($field, $record);
+        $this->db->limit($limit);
+        $this->db->order_by($urutkan, $type);
+        return $this->db->get($tabel);
+    }
     function update($data,$tabel,$field,$record){
         $this->db->where($field, $record);
         $this->db->update($tabel,$data);
